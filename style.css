@@ -9,4 +9,88 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 100vh;
+  background-image: linear-gradient(
+    171.8deg,
+    rgba(5, 111, 146, 1) 13.5%,
+    rgba(6, 57, 84, 1) 78.6%
+  );
+}
+
+#time {
+  display: flex;
+  gap: 2.5rem;
+  color: #fff;
+}
+
+#time .circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 10rem;
+  width: 10rem;
+}
+
+#time .circle svg {
+  position: relative;
+  height: 10rem;
+  width: 10rem;
+  transform: rotate(270deg);
+}
+
+#time .circle svg circle {
+  height: 100%;
+  width: 100%;
+  fill: transparent;
+  stroke: #191919;
+  stroke-width: 4;
+  transform: translate(0.5rem, 0.5rem);
+}
+
+#time .circle svg circle:nth-child(2) {
+  stroke: var(--clr);
+  stroke-dasharray: 440;
+}
+
+#time .ap {
+  font-size: 1rem;
+  position: relative;
+  transform: translateX(-1.25rem);
+}
+
+#time div {
+  font-weight: 500;
+  font-size: 2rem;
+  position: absolute;
+  text-align: center;
+}
+
+#time div span {
+  position: absolute;
+  font-size: 0.6rem;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  transform: translateX(-50%);
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 10;
+}
+
+.dots:before {
+  content: "";
+  background-color: var(--clr);
+  border-radius: 50%;
+  box-shadow: 0 0 1.25rem var(--clr), 0 0 3.75rem var(--clr);
+  position: absolute;
+  top: 2px;
+  height: 1.125rem;
+  width: 1.125rem;
 }
